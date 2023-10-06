@@ -1,0 +1,3 @@
+# Ignore some non-essential libraries #
+libs/unused
+libs/OrbitControl.js
