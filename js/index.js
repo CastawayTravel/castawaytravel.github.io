@@ -6,7 +6,7 @@ document.body.appendChild(container);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
 /* Navy blue */
-const backgroundColor = new THREE.Color(0x12174a);
+const backgroundColor = new THREE.Color(0x161422);
 /* Test material */
 const testMaterial = new THREE.MeshStandardMaterial({color: 0xFF0000, wireframe: true});
 const renderer = new THREE.WebGLRenderer({antialias: true});
@@ -79,7 +79,8 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-window.onload = function() {
+/* Wait until page loads */
+window.onload = () => {
     console.log(container.offsetHeight)
     /* Setting */
     setup(container.offsetWidth, container.offsetHeight);
