@@ -69,9 +69,6 @@ function setup(width, height) {
 function animate() {
     if (model != undefined) {
         /* Only render it if model is loaded */
-        geometry = new THREE.IcosahedronGeometry( 200, 3 );
-        material = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, wireframeLinewidth: 1 } );
-        mesh = new THREE.Mesh( geometry, material );
         renderer.render(scene, camera);
         model.scene.rotation.y = model.scene.rotation.y + 0.1;
     }
