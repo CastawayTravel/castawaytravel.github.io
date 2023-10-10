@@ -4,3 +4,10 @@ body {
     background: #12174a;
     margin: 0px;
 }
+
+#model-canvas {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}

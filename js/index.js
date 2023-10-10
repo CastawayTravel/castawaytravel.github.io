@@ -1,29 +1,33 @@
+/* Setup the three.js "sandbox" */
+const container = document.getElementById('model-canvas');
+document.body.appendChild(container);
+
 /* Global variables */
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
 /* Navy blue */
 const backgroundColor = new THREE.Color(0x12174a);
 /* Test material */
 const testMaterial = new THREE.MeshStandardMaterial({color: 0xFF0000, wireframe: true});
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({antialias: true});
 /* Model (.glb) */
 var model = undefined;
 /* ~~~~~~~~~~~~~~~~ */
 
-function setup() {
+function setup(width, height) {
     /* Show loader */
     document.getElementById("page-loader").style.display = "inline-block";
     document.getElementById("model-canvas").style.display = "none";
 
-    
+
     /* Scene & camera settings */
     camera.position.y = 2;
     camera.position.z = 3;
     camera.lookAt(new THREE.Vector3(0, 1, 0));
-
+    
     /* Renderer settings */
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRation);
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.physicallyCorrectLights = true;
     renderer.setClearColor(backgroundColor);
@@ -40,11 +44,11 @@ function setup() {
 
         /* Hide the loader */
         document.getElementById("page-loader").style.display = "none";
-        document.getElementById("model-canvas").style.display = "display";
+        document.getElementById("model-canvas").style.display = "inline-block";
 
 
         /* Show the rendered three.js canvas */
-        document.body.appendChild(renderer.domElement);
+        container.appendChild(renderer.domElement);
     }, function (xhr) {
         console.log(`Model ${Math.round((xhr.loaded / xhr.total * 100))}% loaded`)
     }, function (error) {
@@ -65,6 +69,9 @@ function setup() {
 function animate() {
     if (model != undefined) {
         /* Only render it if model is loaded */
+        geometry = new THREE.IcosahedronGeometry( 200, 3 );
+        material = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, wireframeLinewidth: 1 } );
+        mesh = new THREE.Mesh( geometry, material );
         renderer.render(scene, camera);
         model.scene.rotation.y = model.scene.rotation.y + 0.1;
     }
@@ -72,8 +79,11 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-/* Setting */
-setup();
+window.onload = function() {
+    console.log(container.offsetHeight)
+    /* Setting */
+    setup(container.offsetWidth, container.offsetHeight);
 
-/* Main loop (60FPS) */
-animate();
+    /* Main loop (60FPS) */
+    animate();
+}
