@@ -1,8 +1,9 @@
+@import url("../components/colorscheme.css");
 @import url("../components/spinner.css");
 @import url("../components/burger.css");
 
 body {
-    background: #161422;
+    background: var(--bg-color);
     margin: 0px;
 }
 
