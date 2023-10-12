@@ -12,11 +12,12 @@
     <script src="../libs/tween/Tween.js"></script>
     <script src="../libs/requirejs/require.js"></script>
     <script src="../libs/jquery/jquery.min.js"></script>
-    <script defer src="../js/components/burger.js"></script>
+    <script defer src="../js/components/menu.js"></script>
     <script defer src="../js/pages/index.js"></script>
 </head>
 <body>
-    <div id="burger-wrapper">
+    <input type="checkbox" id="ham-menu">
+    <label for="ham-menu">
         <div class="nav-icon-1" id="burger">
             <span></span>
             <span></span>
@@ -28,6 +29,15 @@
             <span></span>
             <span></span>
         </div>
+    </label>
+    <div class="half-page-cover-fade-in"></div>
+    <div class="half-page-cover-fade-out"></div>
+    <div class="ham-menu">
+        <ul class="menu-list">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Contact</li>
+          </ul>
     </div>
     <div id="header">Castaway Travel - <br>&emsp;The future of travel</div>
     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur tortor est, eget blandit nisi dignissim efficitur. Phasellus maximus risus sed urna vehicula, et sagittis elit ullamcorper. Sed lorem lacus, maximus sed nibh pretium, lacinia faucibus nisl. Sed tincidunt viverra mattis. Phasellus convallis tempus bibendum. Aliquam erat volutpat. Etiam at nulla quam. Praesent pretium cursus malesuada. Morbi consectetur accumsan dapibus.

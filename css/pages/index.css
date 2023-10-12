@@ -1,6 +1,6 @@
 @import url("../components/colorscheme.css");
 @import url("../components/spinner.css");
-@import url("../components/burger.css");
+@import url("../components/menu.css");
 
 body {
     background: var(--bg-color);
@@ -23,7 +23,7 @@ body {
     font-weight: bold;
     font-family: 'Maven Pro';
     letter-spacing: 1px;
-    line-height: 105%;
+    line-height: 74px;
     color: white;
 }
 
