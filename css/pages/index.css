@@ -16,7 +16,7 @@ body {
 
 #header {
     position: absolute;
-    left: 5%;
+    left: 12%;
     top: 5%;
     margin: 10px;
     font-size: 62px;
@@ -40,4 +40,10 @@ body {
     line-height: 105%;
     color: white;
     text-align: justify;
+}
+
+#icon-container {
+    position: absolute;
+    left: 2%;
+    top: 5%;
 }
