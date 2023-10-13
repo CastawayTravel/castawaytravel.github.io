@@ -6,10 +6,10 @@ document.body.appendChild(container);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
 /* Navy blue */
-const backgroundColor = new THREE.Color(0x161422);
+const backgroundColor = new THREE.Color(0x000000);
 /* Test material */
 const testMaterial = new THREE.MeshStandardMaterial({color: 0xFF0000, wireframe: true});
-const renderer = new THREE.WebGLRenderer({antialias: true});
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
 /* Model (.glb) */
 var model = undefined;
 /* ~~~~~~~~~~~~~~~~ */
@@ -30,7 +30,7 @@ function setup(width, height) {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.physicallyCorrectLights = true;
-    renderer.setClearColor(backgroundColor);
+    renderer.setClearColor(backgroundColor, 0);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
