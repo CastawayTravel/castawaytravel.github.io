@@ -48,26 +48,3 @@ body {
     left: 2%;
     top: 5%;
 }
-
-a {
-    color: var(--link-color);
-    font-family: 'Maven Pro';
-    font-size: 62px;
-}
-
-a::before {
-    background: var(--link-color);
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -40%);
-  transform: translate(-50%, -40%);
-}
-
-.menu-list {
-    list-style-type: none;
-}

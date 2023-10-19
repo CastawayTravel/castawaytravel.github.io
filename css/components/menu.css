@@ -1,3 +1,5 @@
+@import url("socialmedia.css");
+
 /* Source for hamburger icon and animation: https://dev.to/webdeasy/10-awesome-css-hamburger-menus-1iho */
 /* Source of slide-in menu: https://codepen.io/arefeh_htmi/pen/bGpyKZd */
 
@@ -147,12 +149,51 @@ label[for="ham-menu"] {
   background-color: var(--menu-bg-secondary-color);
   z-index: 997;
   opacity: 0;
-  display: block;
+  display: none;
 }
 
 #ham-menu:not(:checked) ~ div.half-page-cover-fade-out {
     opacity: 0;
+    display: block;
     animation: fade 0.4s linear 1 reverse;
+}
+
+/* Menu style */
+a {
+    color: var(--link-color);
+    font-family: 'Maven Pro';
+    font-size: 62px;
+}
+
+a::before {
+    background: var(--link-color);
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+}
+
+.menu-list {
+    list-style-type: none;
+}
+
+.socialmedia-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    bottom: 20%;
+    right: 5%;
+    width: 40%;
+    height: 96px;
+    z-index: 999;
+    text-align: center;
+    justify-content: center;
 }
 
 @keyframes fade {

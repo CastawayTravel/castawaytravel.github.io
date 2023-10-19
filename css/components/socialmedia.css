@@ -1,0 +1,26 @@
+.socialmedia-icons {
+    position: relative;
+    display: flex;
+    width: 96px;
+    height: 96px;
+}
+
+.instagram-logo:not(:hover) {
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+    transition: 0.5s;
+}
+
+.instagram-logo:hover {
+    filter: invert(51%) sepia(32%) saturate(4344%) hue-rotate(160deg) brightness(92%) contrast(106%);
+    transition: 0.5s;
+}
+
+.tiktok-logo {
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+    transition: 0.5s;
+}
+
+.tiktok-logo:hover {
+    filter: invert(51%) sepia(32%) saturate(4344%) hue-rotate(160deg) brightness(92%) contrast(106%);
+    transition: 0.5s;
+}
