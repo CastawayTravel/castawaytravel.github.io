@@ -1,0 +1,2 @@
+# Test if website is up #
+GET https://castawaytravel.github.io/pages/index.html
