@@ -14,7 +14,7 @@
 .nav-icon-1 span{
   width: 5px;
   height: 5px;
-  background-color: #fff;
+  background-color: var(--burger-icon-color);
   display: block;
   border-radius: 50%;
   position: absolute;
