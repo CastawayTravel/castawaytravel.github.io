@@ -17,14 +17,14 @@ body {
 
 #header {
     position: absolute;
-    left: 12%;
+    left: 16%;
     top: 5%;
     margin: 10px;
     font-size: 62px;
     font-weight: bold;
     font-family: 'Maven Pro';
     letter-spacing: 1px;
-    line-height: 74px;
+    line-height: 72px;
     color: white;
 }
 
@@ -34,7 +34,7 @@ body {
     top: 30%;
     margin: 10px;
     width: 42%;
-    font-size: 11px;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Maven Pro';
     letter-spacing: 1px;
@@ -45,6 +45,11 @@ body {
 
 #icon-container {
     position: absolute;
-    left: 2%;
-    top: 5%;
+    left: 7%;
+    top: 10%;
+}
+
+img {
+    width: 96px;
+    height: 96px;
 }
