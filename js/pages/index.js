@@ -36,10 +36,11 @@ function setup(width, height) {
 
     /* Load model */
     const loader = new THREE.GLTFLoader();
-    loader.load('../assets/models/Astronaut.glb', function (gltf) {
+    loader.load('../assets/models/luggage.glb', function (gltf) {
         model = gltf;
         gltf.scene;
         gltf.material;
+        gltf.scene.scale.set(2, 2, 2);
         scene.add(gltf.scene);
 
         /* Hide the loader */
